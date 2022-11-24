@@ -11,20 +11,20 @@ st.set_page_config(
 
 selecoes = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
 
-fifa = selecoes['PontosRankingFIFA']
-a, b = min(fifa), max(fifa) 
-fa, fb = 0.15, 1 
-b1 = (fb - fa)/(b-a) 
-b0 = fb - b*b1
-forca = b0 + b1*fifa 
+elo = selecoes['PontosELO']
+a, b = min(elo), max(elo) 
+eloa, elob = 0.15, 1 
+b1 = (elob - eloa)/(b-a) 
+b0 = elob - b*b1
+forca = b0 + b1*elo 
 
 def Resultado(gols1, gols2):
     if gols1 > gols2:
-        res = 'V'
+        res = 'Vitória'
     if gols1 < gols2:
-        res = 'D' 
+        res = 'Derrota' 
     if gols1 == gols2:
-        res = 'E'       
+        res = 'Empate'       
     return res
 
 def MediasPoisson(selecao1, selecao2):
@@ -64,11 +64,11 @@ def ProbabilidadesPartida(selecao1, selecao2):
 
 def Pontos(gols1, gols2):
     rst = Resultado(gols1, gols2)
-    if rst == 'V':
+    if rst == 'Vitória':
         pontos1, pontos2 = 3, 0
-    if rst == 'E':
+    if rst == 'Empate':
         pontos1, pontos2 = 1, 1
-    if rst == 'D':
+    if rst == 'Derrota':
         pontos1, pontos2 = 0, 3
     return pontos1, pontos2, rst
 
@@ -125,12 +125,8 @@ st.table(matriz.applymap(aux))
 st.markdown('---')
 st.markdown("## 🌍 Probabilidades dos Jogos da Copa") 
 
-jogoscopa = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', index_col = 0)
+jogoscopa = pd.read_excel('DS_na_Copa/Projeto_1/dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
 st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', 'Derrota']])
-
-
-st.markdown('---')
-st.markdown('Trabalho desenvolvido no Minicurso FLAI Data Science na Copa do Mundo!')
 
 #bandeira1, nome1, prob, empate, prob, nome2, bandeira2
 #matriz de probabilidades do jogo
