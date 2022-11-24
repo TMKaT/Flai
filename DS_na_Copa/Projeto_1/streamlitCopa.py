@@ -125,7 +125,7 @@ st.table(matriz.applymap(aux))
 st.markdown('---')
 st.markdown("## 🌍 Probabilidades dos Jogos da Copa") 
 
-jogoscopa = pd.read_excel('dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
+jogoscopa = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', index_col = 0)
 st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', 'Derrota']])
 
 
