@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon = '⚽',
 )
 
-selecoes = pd.read_excel('dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
+selecoes = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
 
 elo = selecoes['PontosELO']
 a, b = min(elo), max(elo) 
