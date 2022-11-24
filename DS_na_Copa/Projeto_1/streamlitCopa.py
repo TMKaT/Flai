@@ -20,11 +20,11 @@ forca = b0 + b1*elo
 
 def Resultado(gols1, gols2):
     if gols1 > gols2:
-        res = 'Vitória'
+        res = 'V'
     if gols1 < gols2:
-        res = 'Derrota' 
+        res = 'D' 
     if gols1 == gols2:
-        res = 'Empate'       
+        res = 'E'       
     return res
 
 def MediasPoisson(selecao1, selecao2):
@@ -64,11 +64,11 @@ def ProbabilidadesPartida(selecao1, selecao2):
 
 def Pontos(gols1, gols2):
     rst = Resultado(gols1, gols2)
-    if rst == 'Vitória':
+    if rst == 'V':
         pontos1, pontos2 = 3, 0
-    if rst == 'Empate':
+    if rst == 'E':
         pontos1, pontos2 = 1, 1
-    if rst == 'Derrota':
+    if rst == 'D':
         pontos1, pontos2 = 0, 3
     return pontos1, pontos2, rst
 
@@ -117,6 +117,10 @@ col5.image(selecoes.loc[selecao2, 'LinkBandeiraGrande'])
 st.markdown('---')
 st.markdown("## 📊 Probabilidades dos Placares") 
 
+
+st.markdown('---')
+st.markdown("## 📊 Probabilidades dos Placares") 
+
 def aux(x):
 	return f'{str(round(100*x,1))}%'
 st.table(matriz.applymap(aux))
@@ -130,9 +134,8 @@ st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', '
 
 
 st.markdown('---')
-st.markdown('Trabalho desenvolvido durante o Minicurso [FLAI](https://www.flai.com.br/) Data Science na Copa do Mundo!')
+st.markdown('Trabalho desenvolvido no Minicurso FLAI Data Science na Copa do Mundo!')
 
 #bandeira1, nome1, prob, empate, prob, nome2, bandeira2
 #matriz de probabilidades do jogo
 #placar mais provável
-
