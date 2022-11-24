@@ -11,12 +11,12 @@ st.set_page_config(
 
 selecoes = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
 
-elo = selecoes['PontosELO']
-a, b = min(elo), max(elo) 
-eloa, elob = 0.15, 1 
-b1 = (elob - eloa)/(b-a) 
-b0 = elob - b*b1
-forca = b0 + b1*elo 
+fifa = selecoes['PontosRankingFIFA']
+a, b = min(fifa), max(fifa) 
+fa, fb = 0.15, 1 
+b1 = (fb - fa)/(b-a) 
+b0 = fb - b*b1
+forca = b0 + b1*fifa 
 
 def Resultado(gols1, gols2):
     if gols1 > gols2:
@@ -113,10 +113,6 @@ col2.metric(selecao1, prob[0])
 col3.metric('Empate', prob[1])
 col4.metric(selecao2, prob[2]) 
 col5.image(selecoes.loc[selecao2, 'LinkBandeiraGrande'])
-
-st.markdown('---')
-st.markdown("## 📊 Probabilidades dos Placares") 
-
 
 st.markdown('---')
 st.markdown("## 📊 Probabilidades dos Placares") 
