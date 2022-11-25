@@ -1,5 +1,5 @@
 # Data Science na Copa do Mundo :soccer:
-## Projeto 1
+## Projeto 1 :robot:
 
 Durante a primeira aula do ***Minicurso FLAI: Data Science na Copa do Mundo***, foi desenvolvido uma Inteligência Artificial capaz de prever os jogos da copa com base no Ranking [ELO](https://www.eloratings.net/) de futebol.
 
