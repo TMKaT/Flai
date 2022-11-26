@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon = '⚽',
 )
 
-selecoes = pd.read_excel('DS_na_Copa/Projeto_1/dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
+selecoes = pd.read_excel('DS_na_Copa/dados/DadosCopaDoMundoQatar2022.xlsx', sheet_name ='selecoes', index_col = 0)
 
 elo = selecoes['PontosELO']
 a, b = min(elo), max(elo) 
@@ -125,7 +125,7 @@ st.table(matriz.applymap(aux))
 st.markdown('---')
 st.markdown("## 🌍 Probabilidades dos Jogos da Copa") 
 
-jogoscopa = pd.read_excel('DS_na_Copa/Projeto_1/dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
+jogoscopa = pd.read_excel('DS_na_Copa/dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
 st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', 'Derrota']])
 
 #bandeira1, nome1, prob, empate, prob, nome2, bandeira2
