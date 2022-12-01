@@ -1,4 +1,4 @@
-<h1 align="center"> Repositório criado para adicionar os meus projetos da plataforma da Flai </h1>
+<h1 align="center"> Repositório criado para adicionar os meus projetos da plataforma Flai </h1>
 
 Repositório criado para registrar os projetos realizados através da [Flai](https://www.flai.com.br/)
 
