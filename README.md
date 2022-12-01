@@ -3,9 +3,9 @@
 Repositório criado para registrar os projetos realizados através da [Flai](https://www.flai.com.br/)
 
 ## Minicurso FLAI: Data Science na Copa do Mundo
-* **Primeira etapa:** Desenvolvimento uma Inteligência Artificial capaz de prever os resultados dos jogos da fase de grupo da Copa do Mundo FIFA, no meu exemplo utilizei o Ranking ELO de futebol
-* **Segunda tapa:** Aplicação do modelo desenvolvido para prever os resltados das fases eliminatórias da Copa, podendo simular os resultados da fase de grupo ou utilizar os resultados reais
-* **Terceira etapa:** Criação de um Dashboard compilando as informações extraídas
+* **Primeira etapa:** Desenvolvimento uma Inteligência Artificial capaz de prever os resultados dos jogos da fase de grupo da _**Copa do Mundo FIFA**_, no meu exemplo foi utilizado o Ranking ELO de futebol.
+* **Segunda tapa:** Aplicação do modelo desenvolvido para prever os resltados das fases eliminatórias da _**Copa**_, podendo simular os resultados da fase de grupo ou utilizar os resultados reais.
+* **Terceira etapa:** Criação de um Dashboard compilando as informações extraídas.
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
