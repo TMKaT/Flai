@@ -1,6 +1,6 @@
 <h1 align="center"> Repositório criado para adicionar os meus projetos da plataforma da Flai </h1>
 
-Repositório criado para registrar os bootcamps e projetos realizados através da [Flai](https://www.flai.com.br/)
+Repositório criado para registrar os projetos realizados através da [Flai](https://www.flai.com.br/)
 
 ## Minicurso FLAI: Data Science na Copa do Mundo
 * **Primeira etapa:** Desenvolvimento uma Inteligência Artificial capaz de prever os resultados dos jogos da fase de grupo da Copa do Mundo FIFA, no meu exemplo utilizei o Ranking ELO de futebol
